@@ -1,0 +1,82 @@
+@import '../abstract/variaveis';
+@import '../abstract/base';
+
+.head {
+  @include container;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: $cor-textos;
+  span{
+    padding: 15px;
+    border-radius: 10px;
+    color: $cor-textos;
+    background: $cor-principal;
+  }
+  .form{
+    .procurar{
+      width: 250px;
+      height: 40px;
+      text-align: center;
+
+      border: 2px solid $cor-secundaria;
+      color: $cor-textos;
+      background: $cor-principal;
+    }
+  }
+  .btn-submit{
+    width: 30px;
+    margin-left: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 30px;
+    border: none;
+    background: none;
+  }
+  button {
+    padding: 5px;
+    background: transparent;
+    border: solid 3px $cor-principal;
+    border-radius: 0.5rem;
+    font-weight: bold;
+    width: 4rem;
+    cursor: pointer;
+  }
+  &:hover {
+    // background: #000d;
+    color: $cor-secundaria;
+  }
+  nav {
+    display: none;
+  }
+  .menu-active{
+    display: block;
+  }
+  .menu__nav {
+    ul {
+      display: inline-flex;
+      flex-direction: column;
+      position: absolute;
+      align-items: stretch;
+      gap: 1rem;
+      border: solid 2px $cor-principal;
+      border-radius: 5px;
+
+      background: $cor-principal;
+      li {
+        list-style: none;
+        padding: 0.3rem 1rem;
+        &:hover {
+          background: $cor-secundaria;
+        }
+        a {
+          text-decoration: none;
+          color: $cor-textos;
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+  }
+}

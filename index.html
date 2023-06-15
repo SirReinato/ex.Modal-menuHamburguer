@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles/style.css" />
+    <title>Menu hamburguer / Modal</title>
+  </head>
+  <body>
+    <header class="head">
+      <span>Logo aqui</span>
+      <div class="form">
+        <input
+          type="text"
+          name="procurar"
+          id="procurar"
+          class="procurar"
+          placeholder="Pesquise aqui"
+        />
+        <input class="btn-submit" type="submit" value="🔍" />
+      </div>
+      <div>
+        <button class="menu__button">☰</button>
+        <nav class="menu__nav">
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Produtos</a></li>
+            <li><a href="#">Contatos</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+        commodo consequat.
+      </p>
+      <button class="btn-modal open">Abrir modal</button>
+    </main>
+
+    <dialog class="modal">
+      <header class="modal-header">
+        <h2>Header da Modal</h2>
+        <button type="button" class="btn-fechar close">X</button>
+      </header>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua.
+      </p>
+      <form>
+        <label for="name">Nome:</label>
+        <input type="text" id="name" placeholder="Digite seu nome" required />
+        <button type="submit">Enviar</button>
+      </form>
+    </dialog>
+    <script src="app/main.js"></script>
+  </body>
+</html>

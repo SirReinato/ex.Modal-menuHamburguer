@@ -1,0 +1,92 @@
+@import "../abstract/variaveis";
+@import "../abstract/base";
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap");
+
+main {
+  @include container;
+  font-family: "Poppins", sans-serif;
+  background: $cor-tercearia;
+  p {
+    font-size: 16px;
+  }
+  .btn-modal {
+    border: none;
+    border-radius: 0.5rem;
+    font-weight: 500;
+    font-size: 1rem;
+    background: $cor-principal;
+    color: $cor-textos;
+    transition: filter 0.2s;
+    padding: 1rem 2rem;
+    cursor: pointer;
+  }
+}
+
+.modal {
+  @include container;
+  width: 600px;
+  margin-top: 280px;
+  .modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    h2 {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: $cor-principal;
+    }
+    .btn-fechar {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      clip-path: circle();
+      padding: 5px;
+      aspect-ratio: 1/1;
+      cursor: pointer;
+      font-size: 30px;
+      color: $cor-textos;
+      background: $cor-principal;
+      &:hover,
+      &:focus,
+      button:hover,
+      button:focus {
+        filter: brightness(1.2);
+      }
+    }
+  }
+  p {
+    margin-bottom: 1.5rem;
+    text-align: center;
+    color: $cor-secundaria;
+  }
+  form{
+    width: 50%;
+    margin: 0 auto;
+    label{
+        font-size: 1.2rem;
+        font-weight: 300;
+        color: $cor-principal;
+    }
+    input{
+        width: 56%;
+        height: 20px;
+        border: 2.5px solid $cor-principal;
+        text-align: center;
+
+        color: $cor-textos;
+    }
+    button{
+        height: 20px;
+        width: 22%;
+        text-transform: uppercase;
+        border: 2.5px solid $cor-principal;
+
+        color: $cor-textos;
+        background: $cor-principal;
+    }
+  }
+  &::backdrop {
+    background: rgba(0, 0, 0, .7);
+  }
+}
